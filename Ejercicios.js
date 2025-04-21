@@ -114,7 +114,7 @@ let items = '';
 function agregarItem()
 {
     let numeroActual = numero;
-    items += '<li id="item' + numeroActual + '">' + numeroActual + '</li>' + '<button id="eliminarItem' + numeroActual + '" onclick="()=>{console.log(\'Ejecutando ONCLICK\');document.getElementById(\'item' +numeroActual+ '\').remove(); this.remove();}"> Eliminar item ' + numeroActual + '</button>'; // se crea el li y el button, pero el boton no elimina el li (no cumple su funcion)
+    items += '<li id="item' + numeroActual + '">' + numeroActual + '</li>' + '<button id="eliminarItem' + numeroActual + '" onclick="console.log(\'Ejecutando ONCLICK\');document.getElementById(\'item' +numeroActual+ '\').remove(); this.remove(); restarNumero(); "> Eliminar item ' + numeroActual + '</button>'; // elimina el li pero de manera incorrecta
     console.log(items);
     document.getElementById('lista').innerHTML = items;
     numero++;
@@ -128,3 +128,6 @@ function eliminarItems()
 
 /*8. Modificar el ejercicio anterior para que cada elemento generado tenga un botón
 de "Eliminar" que borre solo ese elemento de la lista.*/
+
+
+
