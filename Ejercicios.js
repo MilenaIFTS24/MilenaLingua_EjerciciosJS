@@ -110,7 +110,7 @@ function deshacerCambio()
 
 /*7. Crear una lista desordenada vacía y un botón. Al hacer click en el botón, agregar un nuevo elemento a la lista con un número que se incremente automáticamente.*/
 let numero = 1;
-let items = '';
+/* let items = '';
 function agregarItem()
 {
     let numeroActual = numero;
@@ -118,7 +118,7 @@ function agregarItem()
     console.log(items);
     document.getElementById('lista').innerHTML = items;
     numero++;
-}
+} */
 function eliminarItems()
 {
     document.getElementById('lista').innerHTML = '';
@@ -129,5 +129,28 @@ function eliminarItems()
 /*8. Modificar el ejercicio anterior para que cada elemento generado tenga un botón
 de "Eliminar" que borre solo ese elemento de la lista.*/
 
+/*Solución alternativa del punto 7 y 8 */
 
 
+function agregarItem()
+{
+    let numeroActual = numero;    
+    let lista = document.getElementById('lista');    
+    let item = document.createElement('li');
+    item.id = 'item' + numeroActual;
+    item.textContent = numeroActual;
+    lista.appendChild(item);
+    let boton = document.createElement('button');
+    boton.id = 'eliminarItem' + numeroActual;
+    boton.textContent = 'Eliminar item ' + numeroActual;    
+    lista.appendChild(boton);
+    boton.addEventListener("click", function() {
+        eliminarItem(numeroActual);        
+    });
+    numero++;
+}
+function eliminarItem(numeroItem)
+{
+    document.getElementById('item' + numeroItem).remove();
+    document.getElementById('eliminarItem' + numeroItem).remove();    
+}
