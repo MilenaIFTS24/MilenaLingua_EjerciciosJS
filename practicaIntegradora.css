@@ -1,0 +1,39 @@
+table {
+    margin: 10px;
+    padding: 10px;
+    border: 2px black dashed;  
+    border-spacing: 0;  
+}
+
+th, td {
+    border: 1px red solid;
+    text-align: center;
+    color: brown;
+}
+th {
+    border-bottom: 0;
+}
+
+td {
+    padding: 5px;      
+} 
+
+td::before {
+    content: ">";
+}
+
+td::first-letter {
+    color: seagreen;
+}
+
+tr:hover {
+    background-color: bisque;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+tr:nth-child(odd){
+    background-color: #B888;
+    
+}
+

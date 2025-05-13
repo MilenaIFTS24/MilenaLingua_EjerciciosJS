@@ -314,3 +314,12 @@ cambiarImagen.addEventListener('click', () =>
             break;
     }
 });
+
+/*Contador automático
+Hacer que un número aumente automáticamente cada segundo al iniciar. Incluir un botón para iniciar/detener. */
+
+let numeroAumento = document.getElementById('numeroAumento');
+let iniciarDetener = document.getElementById('iniciarDetener');
+let contador = 1;
+
+iniciarDetener.addEventListener
